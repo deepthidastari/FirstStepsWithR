@@ -1,13 +1,15 @@
 #Install the ROBDC package if you are running this script for the first time or if you haven't already installed this package
 
 install.packages("RODBC")
+library(RODBC)
 
 #Creating empty list and dataframe for storing results of T-test
 
 resultvector <- list()
 resultdataframe <- data.frame()
 
-library(RODBC)
+#Choosing the sample size
+samplesize = 100
 
 #Establishing connection to the database we want to connect to
 
