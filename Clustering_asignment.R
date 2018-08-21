@@ -12,7 +12,7 @@ k.max <- 10 # Maximal number of clusters
 wss <- sapply(1:k.max,
               function(k){kmeans(data, k)$tot.withinss})
               
-#Plotting the Elbow curve to visualize the optimal point for K              
+#Plotting the Elbow curve to visualize the optimal value for K              
 plot(1:k.max, wss,
      type="b", pch = 19, frame = FALSE,
      xlab="Number of clusters K",
