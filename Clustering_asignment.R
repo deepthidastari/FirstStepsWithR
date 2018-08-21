@@ -2,7 +2,7 @@
 dataset = read.csv('Data.csv')
 
 #Numeric variables only
-data <- resultdataframe[,c(2:11)]  
+data <- dataset[,c(2:11)]  
 
 #Choosing the optimal value for K(the number of clusters) using the Elbow method
 set.seed(123)
@@ -21,4 +21,4 @@ plot(1:k.max, wss,
 #Applying K-Means clustering algorithm 
 km <- kmeans(data, center=5)
 cluster <- km$cluster
-varcluster <- cbind(resultdataframe,cluster)
+varcluster <- cbind(dataset,cluster)
